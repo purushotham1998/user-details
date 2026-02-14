@@ -8,6 +8,6 @@ services:
     env: python
     plan: free
     buildCommand: pip install -r requirements.txt
-    startCommand: python app.py
+    startCommand: waitress-serve --listen=0.0.0.0:$PORT app:app
     # repo: https://github.com/<your-username>/user-details  # optional
     branch: main
