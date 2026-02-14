@@ -4,8 +4,11 @@ import os
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
 
-# SQLite DB path
-DATABASE = os.path.join(app.root_path, 'users.db')
+# Ensure the instance folder exists (writable on hosts like Render)
+os.makedirs(app.instance_path, exist_ok=True)
+
+# SQLite DB path: use the instance folder which is intended for runtime files
+DATABASE = os.path.join(app.instance_path, 'users.db')
 
 
 def get_db():
