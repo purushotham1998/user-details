@@ -83,4 +83,18 @@ document.addEventListener('DOMContentLoaded', function(){
 
   // Initial load
   fetchUsers();
+
+  // GIF toggle (optional) - present on index page
+  const toggleGifBtn = document.getElementById('toggleGifBtn');
+  const heroGif = document.getElementById('heroGif');
+  if (toggleGifBtn && heroGif){
+    toggleGifBtn.addEventListener('click', function(){
+      if (heroGif.classList.contains('hidden')){
+        heroGif.classList.remove('hidden');
+        heroGif.classList.add('fade-in');
+      } else {
+        heroGif.classList.add('hidden');
+      }
+    });
+  }
 });

@@ -92,7 +92,10 @@ document.addEventListener('DOMContentLoaded', function(){
 
   function renderUsers(users){
     if (!users || users.length === 0){
-      usersContainer.innerHTML = '<p>No users match the filters.</p>';
+      usersContainer.innerHTML = '<div class="muted-text">No users match the filters.</div>\n' +
+        '<div class="gif-wrap">' +
+        '<img class="gif-small" src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif" alt="no-results" loading="lazy">' +
+        '</div>';
       return;
     }
 
@@ -102,6 +105,20 @@ document.addEventListener('DOMContentLoaded', function(){
     }
     html += '</tbody></table>';
     usersContainer.innerHTML = html;
+  }
+
+  // GIF toggle for users page
+  const toggleGifBtnUsers = document.getElementById('toggleGifBtnUsers');
+  const usersHeroGif = document.getElementById('usersHeroGif');
+  if (toggleGifBtnUsers && usersHeroGif){
+    toggleGifBtnUsers.addEventListener('click', function(){
+      if (usersHeroGif.classList.contains('hidden')){
+        usersHeroGif.classList.remove('hidden');
+        usersHeroGif.classList.add('fade-in');
+      } else {
+        usersHeroGif.classList.add('hidden');
+      }
+    });
   }
 
   function escapeHtml(s){

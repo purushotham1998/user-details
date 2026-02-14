@@ -8,10 +8,17 @@
 </head>
 <body>
   <div class="container">
-    <h1>Users</h1>
+    <h1>
+      Users
+      <span class="gif-wrap">
+        <!-- tasteful, lightweight animated GIF from a CDN; lazy-loaded -->
+        <img id="heroGif" class="gif-small fade-in" src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" alt="decorative animation" loading="lazy">
+      </span>
+    </h1>
 
     <p>
       <button id="registerBtn">Register</button>
+      <button id="toggleGifBtn" class="ghost" type="button">Toggle animation</button>
     </p>
 
     <div id="formContainer" style="display:none;">
