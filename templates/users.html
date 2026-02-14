@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>All Users</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Submitted Users</h1>
+    <div class="filters">
+      <h2>Filters & Sort</h2>
+      <div class="filter-row">
+        <label>Age: <input type="number" id="minAge" placeholder="min" min="0"></label>
+        <label>— <input type="number" id="maxAge" placeholder="max" min="0"></label>
+
+        <label>Sex:
+          <select id="sexFilter">
+            <option value="all">All</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+
+        <label>Experience (years): <input type="number" step="0.1" id="minExp" placeholder="min"></label>
+        <label>— <input type="number" step="0.1" id="maxExp" placeholder="max"></label>
+
+        <label>Sort:
+          <select id="sortBy">
+            <option value="">None</option>
+            <option value="age-asc">Age ↑</option>
+            <option value="age-desc">Age ↓</option>
+            <option value="exp-asc">Experience ↑</option>
+            <option value="exp-desc">Experience ↓</option>
+            <option value="name-asc">Name A→Z</option>
+            <option value="name-desc">Name Z→A</option>
+          </select>
+        </label>
+
+        <button id="applyFilters">Apply</button>
+        <button id="clearFilters">Clear</button>
+      </div>
+    </div>
+
+    <div id="usersContainer">
+      <!-- users table will be rendered here by client-side JS -->
+    </div>
+
+    <p><a href="/">Back to form</a></p>
+    <script src="/static/users.js"></script>
+
+    <p><a href="/">Back to form</a></p>
+  </div>
+</body>
+</html>

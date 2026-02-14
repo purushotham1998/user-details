@@ -1,0 +1,11 @@
+body { font-family: Arial, sans-serif; background: #f7f7f7; padding: 20px; }
+.container { max-width: 640px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+label { display: block; margin: 10px 0; }
+input, select { padding: 6px 8px; margin-left: 8px; }
+button { margin-top: 10px; padding: 8px 12px; }
+pre { background: #f1f1f1; padding: 10px; border-radius: 4px; }
+
+.users-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+.users-table th, .users-table td { border: 1px solid #e0e0e0; padding: 8px; text-align: left; }
+.users-table th { background: #fafafa; }
+.hidden { display: none; }
