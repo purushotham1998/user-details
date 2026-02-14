@@ -1,0 +1,13 @@
+# Minimal Render service configuration (optional).
+# You can commit this to the repo and connect it in Render for infra-as-code.
+# Update 'repo' or other fields as appropriate for your project.
+
+services:
+  - type: web
+    name: user-details
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 2 --log-level info
+    # repo: https://github.com/<your-username>/user-details  # optional
+    branch: main
